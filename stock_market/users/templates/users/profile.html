@@ -1,0 +1,22 @@
+{% extends "stock_price/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="content-section">
+        <div class="media-body">
+          <h2 class="account-heading">{{ user.username }}</h2>
+          <p class="text-secondary">{{ user.email }}</p>
+          <p></p>
+          <h3><p> Money possesed : {{ user.profile.money_possesed }} </p></h3>
+          <p class="text-primary">Tesla(Phase2) stock possesed : {{ user.profile.Tesla_stock}}</p>
+          <p class="text-primary">TataMotors stock possesed : {{ user.profile.TataMotors_stock}}</p>
+          <p class="text-primary">Nissan stock possesed : {{ user.profile.Nissan_stock}}</p>
+          <p class="text-primary">JPMorganChase stock possesed : {{ user.profile.JPMorgan_stock}}</p>
+          <p class="text-primary">BajajAllianz stock possesed : {{ user.profile.BajajAllianz_stock}}</p>
+          <p class="text-primary">SunPharma stock possesed : {{ user.profile.SunPharma_stock}}</p>
+          <p class="text-primary">GSK-Pfizer stock possesed : {{ user.profile.GSKPfizer_stock}}</p>
+          <p class="text-primary">Nestle stock possesed : {{ user.profile.Nestle_stock}}</p>
+          <p class="text-primary">BHEL stock possesed : {{ user.profile.BHEL_stock}}</p>
+
+        </div>
+      </div>
+{% endblock content %}
