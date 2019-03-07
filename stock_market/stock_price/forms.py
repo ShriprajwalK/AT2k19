@@ -6,10 +6,10 @@ from users.models import Profile
 
 class BuyForm(forms.Form):
     name = forms.CharField(label='Company name', max_length=100)
-    amount = forms.IntegerField(label='Amount of stock you want to buy?')
+    amount = forms.IntegerField(label='Number of stock you want to buy?')
 
 
 
 class SellForm(forms.Form):
     name = forms.CharField(label='Company name', max_length=100)
-    amount = forms.IntegerField(label='Amount of stock you want to sell?')
+    amount = forms.IntegerField(label='Number of stock you want to sell?')

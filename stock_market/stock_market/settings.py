@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'stock_price.apps.StockPriceConfig',
     'users.apps.UsersConfig',
+    'news.apps.NewsConfig',
     'crispy_forms',
 
 ]

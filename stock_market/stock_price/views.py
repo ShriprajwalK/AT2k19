@@ -10,6 +10,14 @@ def home(request):
     context = {
     'details': Company.objects.all()  #Sending data so that the html template can use it.
     }
+    with open('/home/the_daemon_lord/Share_Market/current.txt','w') as f:
+        s = ""
+        for i in Company.objects.all():
+            l=i
+            s+=str(l.name)+" "+str(l.current_price)+" "+str(l.percentage_change)+"\n"
+        f.writelines(s)
+
+
     #This particular file structure is required in django, although it may seem weird.
     return render(request,'stock_price/home.html',context)#go to stock_price/templates/stock_price/home.html.
 
@@ -22,12 +30,7 @@ def graph(request):
 
 
 def about(request):
-    username = None
-    if request.user.is_authenticated:
-        username = request.user.username
-
     return render(request,'stock_price/about.html')
-
 
 
 def buy(request):
